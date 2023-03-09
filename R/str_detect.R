@@ -1,0 +1,120 @@
+#' Detect the presence or absence of a pattern in a string
+#'
+#' Dependency-free drop-in alternative for `stringr::str_detect()`.
+#'
+#' @source Adapted from the [stringr](https://stringr.tidyverse.org/) package.
+#'
+#' @param string Input vector.
+#'   Either a character vector, or something coercible to one.
+#'
+#' @param pattern Pattern to look for.
+#'
+#'   The default interpretation is a regular expression,
+#'   as described in [base::regex].
+#'   Control options with [regex()].
+#'
+#'   Match a fixed string (i.e. by comparing only bytes), using [fixed()].
+#'   This is fast, but approximate.
+#'
+#' @param negate If `TRUE`, return non-matching elements.
+#'
+#' @return A logical vector.
+#' @export
+#' @staticexport
+str_detect <- function(string, pattern, negate = FALSE) {
+	if (length(string) == 0 || length(pattern) == 0) return(logical(0))
+
+	is_fixed <- inherits(pattern, "stringr_fixed")
+
+	indices <- Vectorize(grep, c("pattern", "x"), USE.NAMES = FALSE)(
+		pattern,
+		x = string,
+		perl = !is_fixed,
+		fixed = is_fixed,
+		invert = negate
+	)
+
+	result <- as.logical(lengths(indices))
+	result[is.na(string)] <- NA
+	result
+}
+
+#' Detect the presence or absence of a pattern at the beginning of a string
+#'
+#' Dependency-free drop-in alternative for `stringr::str_starts()`.
+#'
+#' @param string Input vector.
+#'   Either a character vector, or something coercible to one.
+#'
+#' @param pattern Pattern to look for.
+#'
+#'   The default interpretation is a regular expression,
+#'   as described in [base::regex].
+#'   Control options with [regex()].
+#'
+#'   Match a fixed string (i.e. by comparing only bytes), using [fixed()].
+#'   This is fast, but approximate.
+#'
+#' @param negate If `TRUE`, return non-matching elements.
+#'
+#' @return A logical vector.
+#' @export
+#' @staticexport
+str_starts <- function(string, pattern, negate = FALSE) {
+	if (length(string) == 0 || length(pattern) == 0) return(logical(0))
+
+	is_fixed <- inherits(pattern, "stringr_fixed")
+
+	indices <- Vectorize(grep, c("pattern", "x"), USE.NAMES = FALSE)(
+		paste0("^(", pattern, ")"),
+		x = string,
+		perl = !is_fixed,
+		fixed = is_fixed,
+		invert = negate
+	)
+
+	result <- as.logical(lengths(indices))
+	result[is.na(string)] <- NA
+	result
+}
+
+#' Detect the presence or absence of a pattern at the end of a string
+#'
+#' Dependency-free drop-in alternative for `stringr::str_ends()`.
+#'
+#' @source Adapted from the [stringr](https://stringr.tidyverse.org/) package.
+#'
+#' @param string Input vector.
+#'   Either a character vector, or something coercible to one.
+#'
+#' @param pattern Pattern to look for.
+#'
+#'   The default interpretation is a regular expression,
+#'   as described in [base::regex].
+#'   Control options with [regex()].
+#'
+#'   Match a fixed string (i.e. by comparing only bytes), using [fixed()].
+#'   This is fast, but approximate.
+#'
+#' @param negate If `TRUE`, return non-matching elements.
+#'
+#' @return A logical vector.
+#' @export
+#' @staticexport
+str_ends <- function(string, pattern, negate = FALSE) {
+	if (length(string) == 0 || length(pattern) == 0) return(logical(0))
+
+	is_fixed <- inherits(pattern, "stringr_fixed")
+
+	indices <- grep <- Vectorize(grep, c("pattern", "x"), USE.NAMES = FALSE)(
+		paste0("(", pattern, ")$"),
+		x = string,
+		perl = !is_fixed,
+		fixed = is_fixed,
+		invert = negate
+	)
+
+	result <- as.logical(lengths(indices))
+	result[is.na(string)] <- NA
+	result
+}
