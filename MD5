@@ -1,6 +1,6 @@
-25d210e0f3238de2ab343f67957372bd *DESCRIPTION
+a26f6954f1b54562e0edc664227eff55 *DESCRIPTION
 48b8e2ba5511240dd6c91561272b7ae1 *NAMESPACE
-a9fba0dc554a703545d14e2d7db11bd8 *NEWS.md
+2ef5ffef3ebbcc20e4f818cde831f6a1 *NEWS.md
 4d81298cce389b3742343027c3379498 *R/regex.R
 3477047a527e39acbd8a240f6ae57b33 *R/str_c.R
 8c412f069ef6deb89c221f4261b8cdeb *R/str_count.R
@@ -12,11 +12,11 @@ bca3560d72b8c2effd5d569eb9baa727 *R/str_extract.R
 0a7713fa930be9638082e004f3a90f80 *R/str_pad.R
 6fb165e3173754a2fa90170a9531c733 *R/str_remove.R
 f5c7429e717a359ebefde33a00d209c6 *R/str_replace.R
-37b09d80c0f0614ce8934aaaacf4df71 *R/str_split.R
+09e6406ee042cb657066c300c4d0529a *R/str_split.R
 2b501dc03bf96db12c7d67da29b991f3 *R/str_subset.R
 dc9103cc1ecacb7d9354d1c8a04d043e *R/str_trim.R
 df6cc46bc7fae1a55b713f3d5065b35a *R/stringstatic-package.R
-7b8eed6ae8477478a6ea108af33a4f5f *README.md
+fe5fa8da4ad2bd75ae68b0cf903ee9a7 *README.md
 b57d15b501094d7db944b1a65e8442c3 *inst/staticexports/regex.R
 d57c516cca8b6765e21e52c1b9733db8 *inst/staticexports/str_c.R
 6427ca3fb4e3d856a3e55039955b74fa *inst/staticexports/str_count.R
@@ -69,6 +69,6 @@ a09d7d34b120d0cff37b3ee90f76140b *tests/testthat/test-str_dup.R
 50827339b30d87c30ba69031d5c70481 *tests/testthat/test-str_pad.R
 0e1a757ecec2f92d5d9dbaeb67f90fe8 *tests/testthat/test-str_remove.R
 861e026a47ac22777a1ec86ffc1a61e1 *tests/testthat/test-str_replace.R
-bbfe3f577054c755b62873bedc5affe3 *tests/testthat/test-str_split.R
+bb97da21fccabae38baeaf162d564e98 *tests/testthat/test-str_split.R
 a636ef98275eec8b10b05b7962690823 *tests/testthat/test-str_subset.R
 27c89ca4464f6a2b562eb32b5660e59a *tests/testthat/test-str_trim.R
