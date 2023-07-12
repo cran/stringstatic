@@ -1,6 +1,6 @@
-a26f6954f1b54562e0edc664227eff55 *DESCRIPTION
+bf6c9f3d7a556b6edec97040f0b6e794 *DESCRIPTION
 48b8e2ba5511240dd6c91561272b7ae1 *NAMESPACE
-2ef5ffef3ebbcc20e4f818cde831f6a1 *NEWS.md
+3fcec4b4449275cc25ead864c5c4b7ee *NEWS.md
 4d81298cce389b3742343027c3379498 *R/regex.R
 3477047a527e39acbd8a240f6ae57b33 *R/str_c.R
 8c412f069ef6deb89c221f4261b8cdeb *R/str_count.R
@@ -28,7 +28,7 @@ e51c49cdb373704409b0ed62776c6cc7 *inst/staticexports/str_match.R
 9e94a54efa7b78898fe9190269845926 *inst/staticexports/str_pad.R
 31c6627f3a0342bb848cafd2da8d54f1 *inst/staticexports/str_remove.R
 924ca0293a1fb05ba567d4a79d2aca55 *inst/staticexports/str_replace.R
-13e26b756feb1bb3b71ae1ce4d39349c *inst/staticexports/str_split.R
+e672c777ba5f7f2a792751106746503d *inst/staticexports/str_split.R
 345ef9961bb6e507645c9301be802132 *inst/staticexports/str_subset.R
 fdfb7584bc879b74f232e6912785c1a6 *inst/staticexports/str_trim.R
 993a8610004efd11b6a430ee824ba113 *man/figures/logo.png
@@ -64,7 +64,7 @@ f7b9bbaa2c4dedb8ae98f5408a96f977 *tests/testthat/test-str_c.R
 9a2a387ddf3a18f634e0ada68ff50b69 *tests/testthat/test-str_detect.R
 a09d7d34b120d0cff37b3ee90f76140b *tests/testthat/test-str_dup.R
 733935d09076e86cde560bf07e17b66b *tests/testthat/test-str_extract.R
-044be248c7e375d897714e5edd89d4f6 *tests/testthat/test-str_length.R
+9fdcd4e8116d60641a6a4dbcc6a6a11f *tests/testthat/test-str_length.R
 32ff0706332dab2c87c8c8a059f825df *tests/testthat/test-str_match.R
 50827339b30d87c30ba69031d5c70481 *tests/testthat/test-str_pad.R
 0e1a757ecec2f92d5d9dbaeb67f90fe8 *tests/testthat/test-str_remove.R

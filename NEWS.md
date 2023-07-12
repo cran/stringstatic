@@ -1,3 +1,8 @@
+# stringstatic 0.1.2
+
+* Update staticexport of `str_split()` and `str_split()` fixed to match update in version 0.1.1.
+* Use character instead of numeric for R version in tests, to comply with updated CRAN policy.
+
 # stringstatic 0.1.1
 
 * `str_split()` and `str_split_fixed()` now return a result with a trailing empty string (`""`) when the end of `string` matches `pattern`. This matches the behavior of `stringr::str_split()` and differs from `base::strsplit()` (#16).
